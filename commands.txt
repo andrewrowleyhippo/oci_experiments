@@ -1,1 +1,2 @@
-ssh -i ADDR/.ssh/KEY USER@REMOTE_IP
+ssh -i /Users/andrew.rowley/.ssh/KEY USER@REMOTE_IP
+scp /Users/andrew.rowley/Documents/training/oracle/weather.csv USER@REMOTE_IP/data_work
