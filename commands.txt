@@ -1,2 +1,3 @@
 ssh -i /Users/andrew.rowley/.ssh/KEY USER@REMOTE_IP
 scp /Users/andrew.rowley/Documents/training/oci_experiments/data/weather.csv USER@REMOTE_IP/data_work
+

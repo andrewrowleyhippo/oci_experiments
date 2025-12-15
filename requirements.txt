@@ -1,2 +1,4 @@
 numpy == 2.0.2
 pandas == 2.2.2
+black == 25.11.0
+ipykernel = 6.31.0
