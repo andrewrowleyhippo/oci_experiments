@@ -1,0 +1,1 @@
+ssh -i ADDR/.ssh/KEY USER@REMOTE_IP
