@@ -1,6 +1,7 @@
 # Custom
 notes/
 .DS_Store
+.cronlog
 *.ipynb
 
 # Byte-compiled / optimized / DLL files

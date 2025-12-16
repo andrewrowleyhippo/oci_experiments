@@ -1,0 +1,2 @@
+
+* * * * * /Users/andrew.rowley/Documents/training/oci_experiments/.venv/bin/python /Users/andrew.rowley/Documents/training/oci_experiments/call_api.py >> /tmp/oci_experiments.cronlog 2>&1
