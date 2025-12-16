@@ -1,0 +1,12 @@
+- name: Deploy to oci weather main vm
+  environment: production
+  uses: appleboy/ssh-action@v0.1.5
+  with:
+    host: ${{ secrets.VM_HOST }}
+    username: ${{ secrets.VM_USER }}
+    key: ${{ secrets.VM_SSH_KEY }}
+    port: 22
+    script: |
+      cd /home/ubuntu/oci_experiments
+      git checkout main
+      git pull origin main
