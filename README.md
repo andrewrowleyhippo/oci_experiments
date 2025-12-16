@@ -16,3 +16,11 @@ DONE
 - Make develop do a weather API call
 - PR into main
 - Update main on VM
+DONE
+
+*III*
+- Set up GHA
+- Push to main, deploy automatically
+- PRs with develop branch
+IN PROGRESS
+
