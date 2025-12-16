@@ -6,7 +6,7 @@ on:
 
 jobs:
   job_id:
-    name: Job Name
+    name: checkout_and_deploy
     runs-on: ubuntu-latest
     environment: production
     steps:
