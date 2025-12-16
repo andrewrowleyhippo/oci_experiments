@@ -29,3 +29,5 @@ if __name__ == "__main__":
     path = "data/weather.csv"
     df = extract_data_to_df(path)
     dfx = clean_df(df)
+
+    print(dfx.head())

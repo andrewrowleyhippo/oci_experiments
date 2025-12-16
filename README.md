@@ -9,5 +9,10 @@ _Started @15/12/2025_
 - Transfer data, and code
 - Run script
 - Output data
+DONE
 
-*I*
+*II*
+- Branch off develop
+- Make develop do a weather API call
+- PR into main
+- Update main on VM
