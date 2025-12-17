@@ -1,17 +1,22 @@
 """Take a csv of weather data and parse it."""
 
 import pandas as pd
+import re
 
 
 def snakecasify_columns(df):
     """For a pandas dataframe, coerce column names to snake_case."""
-    cols = df.columns.tolist()
-    cols_mod = [0] * len(cols)
-    for i, c in enumerate(cols):
-        cols_mod[i] = c.lower().strip().replace(" ", "_")
-    d = dict(zip(cols, cols_mod))
-    df.rename(columns=d, inplace=True)
-    return df
+
+    def to_snake(col):
+        col = re.sub(r"[^\w]+", "_", col)
+        col = re.sub(r"(?<=[a-z0-9])([A-Z])", r"_\1", col)
+        col = col.lower()
+        col = re.sub(r"_+", "_", col).strip("_")
+        return col
+
+    new_cols = [to_snake(c) for c in df.columns]
+    df_s = df.rename(columns=dict(zip(df.columns, new_cols)))
+    return df_s
 
 
 def extract_data_to_df(path):
