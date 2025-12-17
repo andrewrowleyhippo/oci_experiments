@@ -1,4 +1,4 @@
-name: Pull Request
+name: pull_request
 
 on:
   push:
@@ -26,7 +26,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Black Code Format Check
-        run: .venv/bin/python black --check .
+        run: .venv/bin/python -m black --check .
 
       - name: Run Tests
-        run: .venv/bin/python pytest
+        run: .venv/bin/python -m pytest
