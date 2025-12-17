@@ -1,12 +1,14 @@
 name: main_workflow
 on:
-  push:
-    branches:
-      - main
-
+  workflow_run:
+    workflows: ["pull_request"]   # Must match the name of your PR workflow
+    types:
+      - completed
+      
 jobs:
   job_id:
     name: checkout_and_deploy
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' }}
     runs-on: ubuntu-latest
     environment: production
     steps:
