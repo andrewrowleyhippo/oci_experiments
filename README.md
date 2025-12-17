@@ -22,5 +22,13 @@ DONE
 - Set up GHA
 - Push to main, deploy automatically
 - PRs with develop branch
-IN PROGRESS
+
+*IV*
+- Make new feature branch
+- Improving functions, and getting test coverage
+In progress
+
+*V* 
+- New feature to make reponse from API call output as a message
+TBC
 
