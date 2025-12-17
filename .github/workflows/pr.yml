@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x' # Adjust to match your project's Python version
+          python-version: '3.x'
 
       - name: Install dependencies
         run: |
@@ -26,7 +26,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Black Code Format Check
-        run: black --check .  # This fails if code doesn't adhere to Black formatting
+        run: .venv/bin/python black --check .
 
       - name: Run Tests
-        run: pytest  # This runs your test suite
+        run: .venv/bin/python pytest
