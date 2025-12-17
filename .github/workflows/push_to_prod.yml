@@ -1,4 +1,4 @@
-name: main_workflow
+name: push_to_prod
 on:
   workflow_run:
     workflows: ["pull_request"]   # Must match the name of your PR workflow
