@@ -1,6 +1,7 @@
 """Reach out to a free API and return a df of data."""
 
 import requests
+from datetime import datetime, timezone
 
 
 def get_stations():
@@ -18,16 +19,20 @@ def get_weather(station_id="0516W"):
 
 def parse_weather(packet):
     properties = packet["properties"]
+    dt = datetime.strptime(properties["timestamp"], "%Y-%m-%dT%H:%M:%S%z")
     data = {
-        "stationId": properties["stationId"],
-        "stationName": properties["stationName"],
-        "timestamp": properties["timestamp"],
+        "station_id": properties["stationId"],
+        "station_name": properties["stationName"],
+        "year": dt.year,
+        "month": dt.month,
+        "day": dt.day,
+        "time": dt.strftime("%H:%M:%S"),
         "temp": properties["temperature"]["value"],
-        "wind direction": properties["windDirection"]["value"],
-        "windSpeed": properties["windSpeed"]["value"],
+        "wind_direction": properties["windDirection"]["value"],
+        "wind_speed": properties["windSpeed"]["value"],
         "visibility": properties["visibility"]["value"],
-        "windGust": properties["windGust"]["value"],
-        "rain last 3 hours": properties["precipitationLast3Hours"]["value"],
+        "wind_gust": properties["windGust"]["value"],
+        "rain_last_3_Hours": properties["precipitationLast3Hours"]["value"],
     }
     return data
 
