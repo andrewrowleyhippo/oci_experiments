@@ -9,6 +9,7 @@ _Started @15/12/2025_
 - Transfer data, and code
 - Run script
 - Output data
+
 DONE
 
 *II*
@@ -16,6 +17,7 @@ DONE
 - Make develop do a weather API call
 - PR into main
 - Update main on VM
+
 DONE
 
 *III*
@@ -23,12 +25,23 @@ DONE
 - Push to main, deploy automatically
 - PRs with develop branch
 
+DONE
+
 *IV*
 - Make new feature branch
 - Improving functions, and getting test coverage
-In progress
+
+DONE
 
 *V* 
 - New feature to make reponse from API call output as a message
-TBC
+- Load into OCI object store
+
+In progress
+
+*VI*
+- Containerise
+
+*VII*
+- IaC
 
