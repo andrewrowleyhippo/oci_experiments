@@ -2,6 +2,7 @@
 notes/
 .DS_Store
 .cronlog
+.vscode
 *.ipynb
 
 # Byte-compiled / optimized / DLL files
