@@ -19,7 +19,7 @@ def write_to_bucket(packet, bucket_name, object_name):
 if __name__ == "__main__":
 
     # put data to s3
-    weather = call_api.get_weather(station_id="WNG736")
+    weather = call_api.get_weather(station_id="0408W") # virginia tech
     data = call_api.parse_weather(weather)
     bucket_name = "weather-app"
 
